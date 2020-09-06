@@ -1,5 +1,25 @@
-<h1>New Avatar</h1>
+<div class="container-ok">
+<div class="d-flex container justify-content-center display-bubble">
+    <%= simple_form_for(@avatar) do |f| %>
 
-<%= render 'form', avatar: @avatar %>
+         <%= f.error_notification %>
+         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-<%= link_to 'Back', avatars_path %>
+         <div class="form-inputs">
+          <h3 class="title-new">Ajouter un avatar</h3>
+          <p class="conseil">Essayez de répartir le texte sur les différents champs intitulés "content" pour plus d'harmonie.</p>
+           <%= f.input :nom %>
+           <%= f.input :prenom %>
+           <%= f.input :role %>
+           <%= f.input :bio_url %>
+           <%= f.input :img_url %>
+           <%= f.select :category_id, Category.all.map {|c| [c.name, c.id]}%>
+         </div>
+
+         <div class="form-actions">
+           <%= f.button :submit, class: "btn btn-danger title-new" %>
+         </div>
+       <% end %>
+</div>
+</div>
+

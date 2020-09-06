@@ -1,4 +1,57 @@
-<p id="notice"><%= notice %></p>
+<div class="container-ok">
+<%= render "components/header" %>
+<body style="background-color:#FF0000;">
+  <div class="img-back-blanc"><%= link_to(image_tag("cc.png", alt: "QQ29 - all rights reserved."), articles_path) %></div>
+<div class="center-div">
+<div class="card-article-show">
+<div class="article_info img_article_show">
+  <h1 class="feature"><%= @article.title %></h1>
+  <h2 class="feature"><%= @article.sous_titre %></h2>
+<div class="display-info-article-show">
+  <p class="feature"><%= @article.date %></p>
+  <p>-</p>
+  <p><%= @article.lieu %></p>
+</div>
+<div class="center-div-2">
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+  <%= image_tag("#{@article.image_url}") %>
+  <h5><%= @article.legend %></h5>
+  <p><%= @article.content %></p>
+ <% if @article.video != ""  %>
+  <iframe width="845" height="560"
+    src="<%= @article.video %>"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+  <% end %>
+  <%= image_tag("#{@article.image_url_2}") %>
+  <h5><%= @article.legend_2 %></h5>
+  <p><%= @article.content_2 %></p>
+  <%= image_tag("#{@article.image_url_3}") %>
+  <h5><%= @article.legend_3 %></h5>
+  <p><%= @article.content_3 %></p>
+  <%= image_tag("#{@article.image_url_4}") %>
+  <h5><%= @article.legend_4 %></h5>
+  <p><%= @article.content_4 %></p>
+  <%= image_tag("#{@article.image_url_5}") %>
+  <h5><%= @article.legend_5 %></h5>
+  <p><%= @article.content_5 %></p>
+  <%= image_tag("#{@article.image_url_6}") %>
+  <h5><%= @article.legend_6 %></h5>
+  <%= image_tag("#{@article.image_url_7}") %>
+  <h5><%= @article.legend_7 %></h5>
+  <%= image_tag("#{@article.image_url_8}") %>
+  <h5><%= @article.legend_8 %></h5>
+  <%= image_tag("#{@article.image_url_9}") %>
+  <h5><%= @article.legend_9 %></h5>
+  <%= image_tag("#{@article.image_url_10}") %>
+  <h5><%= @article.legend_10 %></h5>
+</div>
+</div>
+</div>
+</div>
+
+<%= render "components/footer" %>
+</body>
+</div>
