@@ -14,6 +14,8 @@
   height: 160px;
   border-radius: 50%;
   margin: 20px;
+  object-fit: cover;
+
   text-align: center !important;
 }
 
@@ -51,8 +53,7 @@
 }
 
 .container-banner img{
-width: 500px;
-margin-bottom: 20px;
+width: 600px;
 opacity: 1 !important;
 }
 
@@ -713,7 +714,7 @@ font-size: 1rem;
 }
 
 .logo-qq img {
-width: 90px;
+      width: 150px;
 height: auto;
 }
 
@@ -1400,7 +1401,7 @@ display:none;
 
 
 .banner{
-  height: 500px;
+  height: 700px;
   padding: 100px 0 !important;
 
 }
