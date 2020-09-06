@@ -80,6 +80,10 @@ test:
 #
 production:
   <<: *default
-  database: collectifrpz_production
-  username: collectifrpz
-  password: <%= ENV['COLLECTIFRPZ_DATABASE_PASSWORD'] %>
+  database: d4g5m6qdfgfi1h
+  username: tqegxyiqfwempc
+  password: f954c120aeab2374d14f3c6a68760653b137327587e1e2885b132365eceede3c
+  host: ec2-54-217-206-236.eu-west-1.compute.amazonaws.com
+  adapter: postgresql
+  port: 5432
+  DATABASE_URL=: postgres://tqegxyiqfwempc:f954c120aeab2374d14f3c6a68760653b137327587e1e2885b132365eceede3c@ec2-54-217-206-236.eu-west-1.compute.amazonaws.com:5432/d4g5m6qdfgfi1h
